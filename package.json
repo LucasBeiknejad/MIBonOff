@@ -1,0 +1,10 @@
+{
+  "name": "on:off test",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@tuya/tuya-connector-nodejs": "2.1.2",
+    "crypto": "1.0.1",
+    "tuyapi": "github:codetheweb/tuyapi#0f134079e19c6cb70126463761963e7d2bec6a7b"
+  }
+}
