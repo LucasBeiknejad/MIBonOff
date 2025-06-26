@@ -8,6 +8,7 @@
       "dependencies": {
         "@tuya/tuya-connector-nodejs": "2.1.2",
         "crypto": "1.0.1",
+        "dotenv": "16.4.7",
         "tuyapi": "github:codetheweb/tuyapi#0f134079e19c6cb70126463761963e7d2bec6a7b"
       }
     },
@@ -72,6 +73,14 @@
       },
       "dependencies": {
         "ms": "2.1.3"
+      }
+    },
+    "dotenv@16.4.7": {
+      "name": "dotenv",
+      "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-16.4.7.tgz",
+      "integrity": "sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==",
+      "engines": {
+        "node": ">=12"
       }
     },
     "dunder-proto@1.0.1": {
@@ -345,6 +354,7 @@
   "dependencies": {
     "@tuya/tuya-connector-nodejs": "2.1.2",
     "crypto": "1.0.1",
+    "dotenv": "16.4.7",
     "tuyapi": "github:codetheweb/tuyapi#0f134079e19c6cb70126463761963e7d2bec6a7b"
   }
 }
