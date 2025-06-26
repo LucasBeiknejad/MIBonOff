@@ -20,7 +20,7 @@ async function onOff() {
 
   setTimeout(() => { command(true)}, 8 * 1000)
 
-  setTimeout(() => { onOff() }, 30 * 1000)
+  setTimeout(() => { onOff() }, 10 * 60 * 1000)
 }
 
 onOff()
