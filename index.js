@@ -1,6 +1,8 @@
 import { TuyaContext  } from '@tuya/tuya-connector-nodejs';
 import 'dotenv/config'
 
+console.log(process.env.ACCESS_KEY)
+
 const context = new TuyaContext({
   baseUrl: 'https://openapi.tuyaeu.com',
   accessKey: process.env.ACCESS_KEY,
@@ -9,11 +11,16 @@ const context = new TuyaContext({
 
 const device_id = 'bf8f7ee9806fbd01e8edr7'
 
-const command = async(x) => await context.request({
-  path: `/v2.0/cloud/thing/${device_id}/shadow/properties/issue`,
-  method: 'POST',
-  body: {properties: `{\"switch_1\":${ x }}`}
-});
+const command = async(x) => {
+  console.log('Setting power state: ', x)
+
+  await context.request({
+    path: `/v2.0/cloud/thing/${device_id}/shadow/properties/issue`,
+    method: 'POST',
+    body: {properties: `{\"switch_1\":${ x }}`}
+  });
+
+}
 
 async function onOff() {
   command(false)
