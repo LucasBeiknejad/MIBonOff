@@ -1,8 +1,6 @@
 import { TuyaContext  } from '@tuya/tuya-connector-nodejs';
 import 'dotenv/config'
 
-console.log(process.env.ACCESS_KEY)
-
 const context = new TuyaContext({
   baseUrl: 'https://openapi.tuyaeu.com',
   accessKey: process.env.ACCESS_KEY,
@@ -22,8 +20,12 @@ const command = async(x) => {
 
 }
 
+const cycles = 0
+
 async function onOff() {
   command(false)
+
+  console.log(cycles++, ' - Cycles ran')
 
   setTimeout(() => { command(true)}, 8 * 1000)
 
