@@ -20,12 +20,12 @@ const command = async(x) => {
 
 }
 
-const cycles = 0
+let cycles = 1
 
 async function onOff() {
   command(false)
 
-  console.log(cycles++, ' - Cycles ran')
+  console.log(cycles++, '- Cycles ran')
 
   setTimeout(() => { command(true)}, 8 * 1000)
 
